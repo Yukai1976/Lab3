@@ -11,7 +11,12 @@ def bubble_sort(arr, sorting_order):
 
     # Get number of elements in the list
     n = len(arr_result)
-    if n == 0:
+    for a in arr_result:
+        if isinstance(a,str):
+            n=-1
+    if n==-1:
+        arr_result = 2
+    elif n==0:
         arr_result = 0
     elif n < 10:
         # Traverse through all array elements
@@ -55,5 +60,4 @@ def main():
 
 if __name__ == "__main__":
     main()
-
 
